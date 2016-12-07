@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet"
+			href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<link rel="stylesheet"
+			href="Styles/JqueryPanel.css" />
+		<script src="http://code.jquery.com/jquery-2.0.1.min.js"></script>
+		<script
+			src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="page-1">
+		<div data-role="header">
+			<h1><font size="5px"><b>Bem Vindo à NerdStore</b></font></h1>
+		</div>
+		<div data-role="content">
+			<p>
+				<h3 id="heading-1" class="ui-bar ui-bar-b ui-corner-all">Escolha um dos nossos produtos abaixo.</h3>
+		<div class="ui-body ui-body-a ui-corner-all">			
+			<div data-role="collapsible">
+				<h4>Reatores</h4>
+					<div class="ui-grid-d">
+							<div class="ui-block-a"><img hspace="85" src="images/ReatorArc.png" style="width:60px;height:60px;" /></div>
+							<div class="ui-block-b"><b>Preço:</b> <label for="text-1">Colocar Preço Aqui</label></div>
+							<div class="ui-block-c"><b>Gerador Ark:</b>
+								<input name="qdtReatorArk" placeholder="0" type="number" max="10"/></div>
+							<div class="ui-block-d"><b>Quantidade Disponivel:</b>
+								<label><a class="ui-btn ui-corner-all">Colocar Quantidade Aqui</a></label></div>
+							<div class="ui-block-a"><img hspace="85" src="images/reatorSolar.jpeg" style="width:60px;height:60px;" /></div>
+							<div class="ui-block-b"><b>Preço:</b> <label for="text-1">Colocar Preço Aqui</label></div>
+							<div class="ui-block-c"><b>Gerador Solar:</b>
+								<input name="qdtReatorSolar" placeholder="0" type="number" /></div>
+							<div class="ui-block-d"><b>Quantidade Disponivel:</b>
+								<label><a class="ui-btn ui-corner-all">Colocar Quantidade Aqui</a></label></div>
+					</div>				
+			</div>
+			<div data-role="collapsible">
+				<h4>Robôs</h4>
+					<div class="ui-grid-d">
+							<div class="ui-block-a"><img hspace="85" src="images/domestico.jpeg" style="width:60px;height:60px;"/></div>
+							<div class="ui-block-b"><b>Preço:</b> <label for="text-1">Colocar Preço Aqui</label></div>
+							<div class="ui-block-c"><b>Robô Doméstico:</b>
+								<input name="qdtRoboDomestico" placeholder="0" type="number"/></div>
+							<div class="ui-block-d"><b>Quantidade Disponivel:</b>
+								<label><a class="ui-btn ui-corner-all">Colocar Quantidade Aqui</a></label></div>
+							<div class="ui-block-a"><img hspace="85" src="images/seguranca.jpeg" style="width:60px;height:60px;" /></div>
+							<div class="ui-block-b"><b>Preço:</b> <label for="text-1">Colocar Preço Aqui</label></div>
+							<div class="ui-block-c"><b>Robô De Segurança:</b>
+								<input name="qdtRoboSeguranca" placeholder="0" type="number"/></div>
+							<div class="ui-block-d"><b>Quantidade Disponivel:</b>
+								<label><a class="ui-btn ui-corner-all">Colocar Quantidade Aqui</a></label></div>
+							<div class="ui-block-a"><img hspace="85" src="images/medico.jpeg" style="width:60px;height:60px;" /></div>
+							<div class="ui-block-b"><b>Preço:</b> <label for="text-1">Colocar Preço Aqui</label></div>
+							<div class="ui-block-c"><b>Robô Médico:</b>
+								<input name="qdtRoboMedico" placeholder="0" type="number" /></div>
+							<div class="ui-block-d"><b>Quantidade Disponivel:</b>
+								<label><a class="ui-btn ui-corner-all">Colocar Quantidade Aqui</a></label></div>		
+					</div>	
+			</div>
+			
+		</div>
+		<div id="heading-2" class="ui-corner-all custom-corners">
+				<div class="ui-bar ui-bar-b">
+					<h3>Informações Para Compra</h3>
+				</div>
+				<div class="ui-body ui-body-a">
+					<div class="ui-grid-a">
+						<div class="ui-block-a">
+							<table>
+								<tr>
+									<td><b>Nome:</b></td>
+									<td><input type="text" name="Nome" placeholder="Nome" size="50"></td>
+								</tr>
+								<tr>
+									<td><b>Email:</b></td>
+									<td><input type="text" name="Email" placeholder="email@exemplo.com" size="15"></td>
+								</tr>
+								<tr>
+									<td><b>CEP:</b></td>
+									<td><input type="text" name="cep" placeholder="00000-000" size="9"></td>
+								</tr>
+							</table>
+					</div>
+							<div class="ui-block-b">
+								<a href="#panel-1" class="ui-btn ui-btn-inline ui-corner-all ui-shadow ui-icon-arrow-r ui-btn-icon-right">Dados Do Cartão</a>
+									<div class="ui-panel-inner" data-role="panel" id="panel-1" data-position="right" data-position-fixed="true" data-swipe-close="false" data-dismissible="false" data-display="overlay">
+											<ul data-role="listview" id="listview-1">
+												<li data-role="list-divider">Número do Cartão
+														<input name="Cartao"  data-clear-btn="true" data-mini="true" value="" maxlength="16" required="true" placeholder="0000 0000 0000 0000 - 000"type="text"/>
+												</li>
+												<li data-role="list-divider">Vencimento
+														<input name="CartaoVenc" id="datavencimento" data-clear-btn="true" data-mini="true" value="" placeholder="Mês/Ano" maxlength="7" required="true" type="date"/>
+												</li>
+											</ul>
+									</div>
+							</div>
+													
+						</div>
+					</div>
+				</div>	
+			</div>
+			
+			<br><p>
+			<input class="ui-input-btn ui-btn ui-corner-all" type="submit" value="Realizar Pedido">
+			<input class="ui-input-btn ui-btn ui-corner-all" type="reset" value="Cancel">
+			</p>
+		
+		<div data-role="footer">
+			<h4>Volte Sempre!</h4>
+		</div>
+	</div>
+				
+		
+</body>
+</html>
